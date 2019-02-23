@@ -2,12 +2,12 @@
 
 Simple email API that allows you to push out emails using either SendGrid or MailGun. Has automatic failover from the default provider to the failover provider based on the configuration (see env.template).
 
-Running the tests:
+### Running the tests:
 ```
   npm test
 ```
 
-Deployment:
+### Deployment:
 
 Currently deployments are done using now.sh, to create a deployment from your local machine ensure that you have the now cli installed and a valid account in hand. Simply type the following in the console and the deployment will get triggered:
 ```
@@ -24,7 +24,6 @@ Here is an example:
 To view automatic deployments click [here](https://github.com/gayanhewa/mail-api/deployments)
 
 ## API
-To view deployments click [here](https://github.com/gayanhewa/mail-api/deployments)
 ```
   POST /
 ```
@@ -69,7 +68,6 @@ To view deployments click [here](https://github.com/gayanhewa/mail-api/deploymen
         errors: ['Method not allowed.']
       }
     ```
-
 
 ### Examples
 ```curl
