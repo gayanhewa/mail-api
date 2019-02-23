@@ -23,13 +23,6 @@ Here is an example:
 
 To view automatic deployments click [here](https://github.com/gayanhewa/mail-api/deployments)
 
-## Test mail boxes registered with the deployment
-
-We are using mailinator for the test mailboxes.
- - my-inbox@mailinator.com https://www.mailinator.com/v3/index.jsp?zone=public&query=my-inbox
- - my-inbox-cc@mailinator.com https://www.mailinator.com/v3/index.jsp?zone=public&query=my-inbox-cc
- - my-inbox-bcc@mailinator.com https://www.mailinator.com/v3/index.jsp?zone=public&query=my-inbox-bcc
-
 ## API
 To view deployments click [here](https://github.com/gayanhewa/mail-api/deployments)
 ```
@@ -98,3 +91,17 @@ curl -X POST \
     ]
 }'
 ```
+
+## Additional notes
+
+### Triggering a failover
+ - Triggering a failover can be done by misconfiguring the default provider.
+ - Simplest way to do this when using MailGun in sandbox mode as the default provider to use an email address that is not registered. ie. randomemail@mail.com and the service will block the request.
+
+### Test mail boxes registered with the deployment
+
+The following mailboxes are registered with the MailGun account used for the automatic deployments.
+
+ - [my-inbox@mailinator.com](https://www.mailinator.com/v3/index.jsp?zone=public&query=my-inbox)
+ - [my-inbox-cc@mailinator.com](https://www.mailinator.com/v3/index.jsp?zone=public&query=my-inbox-cc)
+ - [my-inbox-bcc@mailinator.com](https://www.mailinator.com/v3/index.jsp?zone=public&query=my-inbox-bcc)
