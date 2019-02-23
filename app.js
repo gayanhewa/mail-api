@@ -2,13 +2,14 @@
 const { send, json } = require('micro')
 const MailValidator = require('./lib/MailValidator')
 const RetriableMailer = require('./lib/RetriableMailer')
-const dotenv = require('dotenv')
 
 async function handler (req, res) {
-  dotenv.config()
+  if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config()
+  }
   if (req.method !== 'POST') {
     const statusCode = 405
-    const data = { error: 'Method not allowed.' }
+    const data = { message: 'Method not allowed', errors: ['Method not allowed.'] }
     return send(res, statusCode, data)
   }
   const body = await json(req)

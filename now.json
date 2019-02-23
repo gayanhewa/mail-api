@@ -1,1 +1,18 @@
-{}
+{
+  "version": 2,
+  "builds": [
+    { "src": "app.js", "use": "now-micro" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/app.js" }
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "SENDGRID_API_KEY": "@sendgrid_api_key",
+    "MAILGUN_DOMAIN": "@mailgun_domain",
+    "MAILGUN_USERNAME": "@mailgun_username",
+    "MAILGUN_API_KEY": "@mailgun_api_key",
+    "DEFAULT_PROVIDER": "@default_provider",
+    "FAILOVER_PROVIDER": "@failover_provider"
+  }
+}
