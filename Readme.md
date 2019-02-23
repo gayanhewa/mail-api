@@ -78,3 +78,23 @@ To view deployments click [here](https://github.com/gayanhewa/mail-api/deploymen
     ```
 
 
+### Examples
+```curl
+curl -X POST \
+  https://mail-api-dbi4ri6te.now.sh \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "content": "Email body",
+    "subject": "Subject line",
+    "from": "gayanhewa@gmail.com",
+    "to": [
+        "my-inboex@mailinator.com"
+    ],
+    "cc": [
+        "my-inbox-cc@mailinator.com"
+    ],
+    "bcc": [
+        "my-inbox-bcc@mailinator.com"
+    ]
+}'
+```
