@@ -9,6 +9,10 @@
   },
   "author": "Gayan Hewa <gayanhewa@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gayanhewa/mail-api.git"
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "dotenv": "^6.2.0",
@@ -25,5 +29,8 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "micro-dev": "^3.0.0"
+  },
+  "engines": {
+    "node": "11.10.00"
   }
 }

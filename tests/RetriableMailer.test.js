@@ -6,7 +6,6 @@ const MailGun = require('../lib/MailGun')
 const sinon = require('sinon')
 
 test.before('load configuration', t => {
-  console.log('loading test configuration from .env.test')
   if (process.env.NODE_ENV === 'test') {
     require('dotenv').config({ path: `${process.cwd()}/.env.test` })
   }
